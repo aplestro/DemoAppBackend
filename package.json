@@ -1,0 +1,14 @@
+{
+  "name": "demo-aplestro-app-back",
+  "version": "1.0.0",
+  "description": "demo aplestro app",
+  "main": "app.js",
+  "author": "peter.a.nikolaev",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.13.4",
+    "lowdb": "^1.0.0"
+  }
+}
