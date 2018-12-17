@@ -9,7 +9,6 @@ var http = require('http').Server(app);
 var port = process.env.PORT || configs.PORT;
 const bodyParser = require('body-parser');
 var jsonParser = bodyParser.json({ extended: false, limit: '5mb' })
-var urlencodedParser = bodyParser.urlencoded({ extended: false, limit: '5mb' })
 
 app.get('/', function(req, res) {
 	res.render(__dirname + '/web/index.html', {}, function(err, html) {
@@ -23,7 +22,7 @@ app.get('/channel/*', function(req, res) {
 	});	
 });
 
-app.post('/listen', urlencodedParser, function(req, res) {
+app.post('/listen', jsonParser, function(req, res) {
 	listenAplestro(req, res)	
 });
 
