@@ -18,12 +18,12 @@ const testList = [{
 
 module.exports = (req, res) => {
 	try{
-		console.log ('aplestro push action:',req.body.a)
-		console.log ('aplestro push data:',req.body.d)
+		console.log ('aplestro push action:',req.body.actionType)
+		console.log ('aplestro push data:',req.body.actionData)
 
-		const action = req.body.a
+		const action = req.body.actionType
 		if (action === 'USER_INFO'){
-			const params = JSON.parse(req.body.d)
+			const params = JSON.parse(req.body.actionData)
 			console.log ('aplestro push params:',params)
 			console.log ('aplestro push params:',params["userID"])
 
@@ -35,11 +35,11 @@ module.exports = (req, res) => {
 		}
 
 		if (action === 'REJECT_PERMISSION'){			
-			console.log ('aplestro push params:',req.body.d)
+			console.log ('aplestro push params:',req.body.actionData)
 		}
 
 		if (action === 'CONVERSATION'){
-			const conversationData = JSON.parse(req.body.d)
+			const conversationData = JSON.parse(req.body.actionData)
 			const params = JSON.parse(conversationData.params)
 
 			console.log(conversationData.params)
