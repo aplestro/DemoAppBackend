@@ -23,10 +23,8 @@ module.exports = (req, res) => {
 
 		const action = req.body.actionType
 		if (action === 'USER_INFO'){
-			const params = JSON.parse(req.body.actionData)
-			console.log ('aplestro push params:',params)
-			console.log ('aplestro push params:',params["userID"])
-
+			const params = req.body.actionData
+			
 			db.get('users').push({ 
 				userID: params.userID, 
 				username: params.username,
@@ -39,7 +37,7 @@ module.exports = (req, res) => {
 		}
 
 		if (action === 'CONVERSATION'){
-			const conversationData = JSON.parse(req.body.actionData)
+			const conversationData = req.body.actionData
 			const params = JSON.parse(conversationData.params)
 
 			console.log(conversationData.params)

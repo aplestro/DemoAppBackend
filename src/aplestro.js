@@ -33,16 +33,6 @@ const createNewMessage = async (params) => (await axios({
 	data: params
 }));
 
-const requestUserInfo = async (params) => (await axios({
-	url: getURL('permissions/request'),
-	method: 'post',
-	headers: {
-		'Content-Type': 'application/json; charset=utf-8',
-		'Application-Authorization': APLESTRO_SECRET_ID
-	},
-	data: params
-}));
-
 const createNewResource = async (params) => (await axios({
 	url: getURL('resource/add'),
 	method: 'post',
@@ -57,6 +47,5 @@ module.exports = {
 	createNewChannel,
 	updateChannel,
 	createNewMessage,
-	requestUserInfo,
 	createNewResource
 }

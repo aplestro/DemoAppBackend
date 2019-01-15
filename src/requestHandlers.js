@@ -104,25 +104,7 @@ const createNewMessage = async function (req, resp){
 		console.log(e)
 		resp.send({error:true})
 	}
-}	
-
-const requestUserInfo = async function (req, resp){
-	try{
-		const aplestroResp = await aplestro.requestUserInfo({
-		    "requestid": "any-string-for-your-controll",
-		    "userID": req.body.userToken,
-		    "permissions":[{
-		    	"code": "USER_INFO",
-		    	"userText": "the text where the app explain why it need an user info"
-		    }]
-		})
-
-		console.log('aplestro response data:', aplestroResp.data)
-	}catch(e){
-		console.log(e)
-		resp.send({error:true})
-	}
-}	 
+}		 
 
 const requestServerUserInfo = async function (req, resp){
 	try{
@@ -155,7 +137,6 @@ const createNewResource = async function (req, resp){
 }	 
 
 module.exports = {
-	requestUserInfo,
 	requestServerUserInfo,
 	createNewChannel,
 	editChannel,
