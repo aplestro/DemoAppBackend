@@ -9,7 +9,9 @@ npm i
 
 ```
 
-You need to add new app to Aplestro in the [Developer console](https://aplestro.com/developer). You need to obtain "YourAppId" and "YourAppAuthKey"
+You need to add a new app to Aplestro in the [Developer console](https://aplestro.com/developer). You need to obtain "YourAppId" and "YourAppAuthKey"
+
+![](http://about.aplestro.com/content/new-app1-in-list.png =722x512)
 
 Put the values to /src/configs
 

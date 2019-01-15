@@ -38,10 +38,6 @@ app.post('/createNewMessage', jsonParser, function(req, res){
 	requestHandlers.createNewMessage(req,res)
 })
 
-app.post('/requestUserInfo', jsonParser, function(req, res){
-	requestHandlers.requestUserInfo(req,res)
-})
-
 app.post('/requestServerUserInfo', jsonParser, function(req, res){
 	requestHandlers.requestServerUserInfo(req,res)
 })
